@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.jaennova.taskhero.ui.screens.home.MainScreen
 import com.jaennova.taskhero.ui.theme.TaskHeroTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +20,15 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TaskHeroTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                MainScreen()
+                /*Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
-                }
+                }*/
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    TaskHeroTheme {
-        Greeting("Android")
-    }
-}
