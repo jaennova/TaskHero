@@ -3,8 +3,10 @@ package com.jaennova.taskhero.ui.screens.home.components.scaffold
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.PersonPin
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -16,6 +18,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.jaennova.taskhero.ui.theme.Primary
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -24,7 +27,12 @@ fun TaskHeroTopBar(welcomeMessage: String, username: String) {
         modifier = Modifier.padding(top = 10.dp, start = 10.dp, end = 10.dp),
         navigationIcon = {
             IconButton(onClick = { /*TODO*/ }) {
-                Image(imageVector = Icons.Default.Face, contentDescription = null)
+                Icon(
+                    imageVector = Icons.Default.PersonPin,
+                    contentDescription = null,
+                    tint = Primary,
+                    modifier = Modifier.size(42.dp)
+                )
             }
         },
         title = {
@@ -44,7 +52,8 @@ fun TaskHeroTopBar(welcomeMessage: String, username: String) {
             IconButton(onClick = { /*TODO*/ }) {
                 Icon(
                     imageVector = Icons.Outlined.Notifications,
-                    contentDescription = null
+                    contentDescription = null,
+                    tint = Primary
                 )
             }
         }

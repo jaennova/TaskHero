@@ -7,6 +7,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.jaennova.taskhero.ui.theme.Primary
 
 @Composable
 fun TaskHeader(header: String) {
@@ -19,7 +20,7 @@ fun TaskHeader(header: String) {
         Text(
             text = "Ver más",
             style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.secondary,
+            color = Primary,
             modifier = Modifier.weight(0.2f)
         )
     }

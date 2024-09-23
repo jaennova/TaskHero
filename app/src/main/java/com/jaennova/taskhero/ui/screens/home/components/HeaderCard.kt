@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.outlined.AccessTime
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -14,20 +14,28 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.jaennova.taskhero.ui.theme.Primary
 
 @Composable
 fun HeaderCard(
     title: String,
-    subtitle: String,
+    dateTime: String,
     completed: Boolean = false,
-    icon: ImageVector = Icons.Default.Person
+    icon: ImageVector = Icons.Outlined.AccessTime
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier.padding(top = 8.dp)
     ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            modifier = Modifier.weight(0.2f),
+            tint = Primary
+        )
         Column(
             modifier = Modifier
                 .weight(1f)
@@ -39,13 +47,15 @@ fun HeaderCard(
                 textDecoration = if (completed) TextDecoration.LineThrough else null
             )
             Text(
-                text = subtitle,
+                text = dateTime,
                 style = MaterialTheme.typography.labelSmall,
             )
         }
-        Icon(
-            imageVector = icon,
-            contentDescription = null,
-            modifier = Modifier.weight(0.4f)
-        )
-    }}
+    }
+}
+
+@Preview
+@Composable
+fun PreviewHeaderCard() {
+    HeaderCard("Tarea 1", "Viernes, 20 de septiembre", false)
+}

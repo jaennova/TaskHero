@@ -30,13 +30,13 @@ fun MainScreen() {
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
-            TaskHeroSearchBar()
             Spacer(modifier = Modifier.size(8.dp))
             TaskHeader("En progreso (3)")
-            Spacer(modifier = Modifier.size(8.dp))
+            Spacer(modifier = Modifier.size(16.dp))
             OnProgressCard()
             Spacer(modifier = Modifier.size(8.dp))
             TaskHeader("Completadas (3)")
+            Spacer(modifier = Modifier.size(8.dp))
             CompletedCard()
         }
     }
