@@ -12,8 +12,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jaennova.taskhero.ui.screens.home.components.TaskHeader
 import com.jaennova.taskhero.ui.screens.home.components.TaskHeroSearchBar
-import com.jaennova.taskhero.ui.screens.home.components.completedcard.CompletedCard
-import com.jaennova.taskhero.ui.screens.home.components.onprogresscard.OnProgressCard
+import com.jaennova.taskhero.ui.screens.home.components.CompletedCard
+import com.jaennova.taskhero.ui.screens.home.components.OnProgressCard
 import com.jaennova.taskhero.ui.screens.home.components.scaffold.TaskHeroBottomBar
 import com.jaennova.taskhero.ui.screens.home.components.scaffold.TaskHeroFAB
 import com.jaennova.taskhero.ui.screens.home.components.scaffold.TaskHeroTopBar
